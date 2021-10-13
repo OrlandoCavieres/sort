@@ -30,3 +30,12 @@ def buble_sort(array):
         for j in range(0, array_len-i-1):
             if array[j] > array[j + i]:
                 array[j], array[j + 1] = array[j + 1], array[j]
+
+def selection_sort(array):
+    for i in range(len(array)):
+        min_index = i
+        for j in range(i+1, len(array)):
+            if array[min_index] > array[j]:
+                min_index = j
+
+        array[i], array[min_index] = array[min_index], array[i]
