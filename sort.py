@@ -28,7 +28,7 @@ def bubble_sort(array):
 
     for i in range(array_len-1):
         for j in range(0, array_len-i-1):
-            if array[j] > array[j + i]:
+            if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
 
 def selection_sort(array):
