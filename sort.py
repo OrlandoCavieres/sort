@@ -23,7 +23,7 @@ def quick_sort(array, i=None, j=None):
         quick_sort(array, i, pivot - 1)
         quick_sort(array, pivot + 1, j)
 
-def buble_sort(array):
+def bubble_sort(array):
     array_len = len(array)
 
     for i in range(array_len-1):
