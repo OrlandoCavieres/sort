@@ -11,7 +11,7 @@ def get_pivot(array, i, j):
 
 	return item + 1
 
-
+#Fix
 def quick_sort(array, i=0, j=None):
     if j == None:
         j = len(array) - 1
@@ -23,3 +23,4 @@ def quick_sort(array, i=0, j=None):
         _quick_sort(array, i, pivot-1)
         _quick_sort(array, pivot+1, j)
     return _quick_sort(array, i, j)
+
