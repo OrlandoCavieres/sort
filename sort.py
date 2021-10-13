@@ -11,17 +11,17 @@ def get_pivot(array, i, j):
 
 	return item + 1
 
-
-def quick_sort(array, i=None, j=None):
-    if i == None:
-        i = 1
+def quick_sort(array, i=0, j=None):
     if j == None:
         j = len(array) - 1
-        
-    if i < j:
+    def _quick_sort(array, i, j):
+        if i >= j:
+            return
+			
         pivot = get_pivot(array, i, j)
-        quick_sort(array, i, pivot - 1)
-        quick_sort(array, pivot + 1, j)
+        _quick_sort(array, i, pivot-1)
+        _quick_sort(array, pivot+1, j)
+    return _quick_sort(array, i, j)
 
 def bubble_sort(array):
     array_len = len(array)
